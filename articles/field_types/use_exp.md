@@ -166,7 +166,7 @@ For example:  **table.GetTotal(“Sum”, “column1”)**
 
 No methods or properties are available.
 
-When comparing pictures, it is assumed that they are not equal by default.
+When comparing pictures, it is assumed that they are not equal.
 
 
 
@@ -229,17 +229,17 @@ If the length of the string presentation is greater than the alignment value, th
 
 **sqr(argument)** – calculates the argument to square. The argument is of the numeric type, the calculation result is of the numeric type.
 
-**sqrt(argument)** – calculates the argument‟s square root. The argument is of the numeric type, the calculation result is of the numeric type.
+**sqrt(argument)** – calculates the argument's square root. The argument is of the numeric type, the calculation result is of the numeric type.
 
-**log(argument)** – calculates the argument‟s natural logarithm. The argument is of the numeric type, the calculation result is of the numeric type.
+**log(argument)** – calculates the argument's natural logarithm. The argument is of the numeric type, the calculation result is of the numeric type.
 
 **exp(argument)** – raise E number to the argument degree. The argument is of the numeric type, the calculation result is of the numeric type.
 
-**sign(argument)** – returns:-1 if the argument is negative, 0 – if the argument is 0, 1 – if the argument is positive. The argument is of the numeric type, the calculation result is of the numeric type.
+**sign(argument)** – returns:-1 – if the argument is negative, 0 – if the argument is 0, 1 – if the argument is positive. The argument is of the numeric type, the calculation result is of the numeric type.
 
 **abs(argument)** – returns the argument‟s absolute value. The argument is of the numeric type, the calculation result is of the numeric type.
 
-**round(argument1, argument2)** – rounds the 1st argument value to the symbols amount after the comma, assigned by the 2nd argument. The 1st argument is of the double type, the 2nd argument is of the numeric type, the calculation result is of the numeric type.
+**round(argument1, argument2)** – rounds the 1st argument value to the symbols amount after the decimal place, assigned by the 2nd argument. The 1st argument is of the double type, the 2nd argument is of the numeric type, the calculation result is of the numeric type.
 
 ### Date & Time Processing Functions ###
 
@@ -296,7 +296,7 @@ For example: **column1.GetWeekOfYear("D","MO")**
 
 **concat (string1, string2)** - returns the result of appending one string (string2) to the end of another string (string1)
 
-**indexOf(string1, string2,[start])** - returns the position of the first occurrence of a specified value in a string; returns -1 if the value to search for never occurs. [start] – Optional parameter. Default 0. At which position to start the search.
+**indexOf(string, subString [,start])** - returns the position of the first occurrence of a specified value (subString) in a string (string); returns -1 if the value to search for never occurs. [start] – Optional parameter. Default 0. At which position to start the search.
 
 **insert(string,position,subString)** - inserts the target string (subString) into the source string (string) at specified (position)
 
@@ -322,6 +322,6 @@ For example: **column1.GetWeekOfYear("D","MO")**
 
 **trimStart(string)** - returns the given string trimmed of leading whitespace
 
-**regIsMatch(string,expressionString)** - returns the sign of string matching the regular expression (expressionString)
+**regIsMatch(string,expressionString)** - returns true if string matches the regular expression (expressionString), otherwise returns false
 
 **regReplace(string, expressionString, newString)** – replaces a substring matching the regular expression (expressionString) in a (string) with a (newString)
